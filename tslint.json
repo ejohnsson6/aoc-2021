@@ -1,0 +1,27 @@
+{
+    "defaultSeverity": "error",
+    "extends": ["tslint:latest", "tslint-config-prettier"],
+    "jsRules": {},
+    "rulesDirectory": ["tslint-plugin-prettier"],
+    "rules": {
+        "no-console": false,
+        "semicolon": [true, "always"],
+        "prettier": true,
+        "file-name-casing": [true, "kebab-case"],
+        "class-name": true,
+        "variable-name": {
+            "options": [
+                "ban-keywords",
+                "check-format",
+                "allow-leading-underscore",
+                "require-const-for-all-caps"
+            ]
+        },
+        "interface-name": true,
+        "indent": [true, "spaces", 4],
+        "no-trailing-whitespace": [true, "ignore-comments"],
+        "eofline": true,
+        "space-before-function-paren": true,
+        "only-arrow-functions": true
+    }
+}
