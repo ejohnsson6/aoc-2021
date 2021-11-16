@@ -1,5 +1,4 @@
 import fs from 'fs';
-import path from 'path';
 
 export const getSolution = (input: number[]): number => {
     return input[0];

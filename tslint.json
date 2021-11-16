@@ -22,6 +22,10 @@
         "no-trailing-whitespace": [true, "ignore-comments"],
         "eofline": true,
         "space-before-function-paren": true,
-        "only-arrow-functions": true
+        "only-arrow-functions": true,
+        "no-unused-variable": [true, { "ignore-pattern": "^_" }],
+        "no-consecutive-blank-lines": true,
+        "no-require-imports": true,
+        "ordered-imports": true
     }
 }
