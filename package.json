@@ -2,12 +2,12 @@
     "name": "aoc2021",
     "version": "1.0.0",
     "description": "Advent of Code 2021 in TS/Node",
-    "main": "dist/src/aoc.js",
+    "main": "dist/day01/aoc.js",
     "scripts": {
         "start": "bash ./run_all.sh",
-        "day": "run(){ tsc; node dist/src/day${1}/aoc.js; }; run",
-        "bench": "tsc && node dist/benchmark/benchmark.js",
-        "test": "jest"
+        "day": "run(){ tsc; node dist/day${1}/aoc.js; }; run",
+        "bench": "run(){ ts-node src/day${1}/benchmark.ts; }; run",
+        "test": "run(){ jest src/day${1}; }; run"
     },
     "keywords": [],
     "author": "",

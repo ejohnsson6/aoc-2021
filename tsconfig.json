@@ -5,15 +5,15 @@
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "target": "esnext",
+        "target": "es2020",
         "moduleResolution": "node",
         "sourceMap": true,
         "outDir": "dist",
-        "noUnusedLocals": true
+        "noUnusedLocals": true,
+        "rootDir": "src"
     },
     "include": [
-        "src/**/*",
-        "benchmark/**/*"
+        "src/**/*"
     ],
     "exclude": [
         "node_modules",
