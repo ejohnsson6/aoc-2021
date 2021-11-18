@@ -1,4 +1,6 @@
-import fs from 'fs';
+import { getInput } from '../common/get-input';
+
+export const DAY = 1;
 
 export const getSolutionPart1 = (input: number[]): number => {
     const numberExists = new Set();
@@ -12,9 +14,8 @@ export const getSolutionPart1 = (input: number[]): number => {
     throw new Error('No numbers found');
 };
 
-export const readAndParseInput = (): number[] => {
-    const data = fs.readFileSync('./input/day01_1.txt', 'utf8');
-    const split = data.split('\n');
+export const parseInput = (data: string): number[] => {
+    const split = data.trim().split('\n');
     return split.map((s) => parseInt(s, 10));
 };
 
@@ -35,9 +36,10 @@ export const getSolutionPart2 = (input: number[]): number => {
     throw new Error('No numbers found');
 };
 
-const main = () => {
+const main = async () => {
+    const data = await getInput(DAY);
+    const input = parseInput(data);
     // Part 1
-    const input = readAndParseInput();
     const solution1 = getSolutionPart1(input);
     console.log(solution1);
     // Part 2
