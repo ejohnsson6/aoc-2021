@@ -16,7 +16,6 @@
         "@types/benchmark": "^2.1.1",
         "@types/jest": "^27.0.2",
         "@types/lodash": "^4.14.177",
-        "benny": "^3.7.1",
         "jest": "^27.3.1",
         "prettier": "^2.4.1",
         "ts-jest": "^27.0.7",
@@ -28,6 +27,7 @@
     "dependencies": {
         "axios": "^0.24.0",
         "dotenv": "^10.0.0",
-        "lodash": "^4.17.21"
+        "lodash": "^4.17.21",
+        "benny": "^3.7.1"
     }
 }

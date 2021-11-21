@@ -9,7 +9,6 @@
         "moduleResolution": "node",
         "sourceMap": true,
         "outDir": "dist",
-        "noUnusedLocals": true,
         "rootDir": "src"
     },
     "include": [
