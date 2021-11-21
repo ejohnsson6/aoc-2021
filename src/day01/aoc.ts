@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import { getInput } from '../common/get-input';
 
 export const DAY = 1;
@@ -15,8 +16,10 @@ export const getSolutionPart1 = (input: number[]): number => {
 };
 
 export const parseInput = (data: string): number[] => {
-    const split = data.trim().split('\n');
-    return split.map((s) => parseInt(s, 10));
+    return _(data)
+        .trim()
+        .split('\n')
+        .map((s) => parseInt(s, 10));
 };
 
 export const getSolutionPart2 = (input: number[]): number => {

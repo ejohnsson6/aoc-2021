@@ -11,15 +11,15 @@ b.suite(
     }),
     b.add('Part 1', async () => {
         const input = await getInput(DAY);
-        const pInput = parseInput(input);
         return () => {
+            const pInput = parseInput(input);
             getSolutionPart1(pInput);
         };
     }),
     b.add('Part 2', async () => {
         const input = await getInput(DAY);
-        const pInput = parseInput(input);
         return () => {
+            const pInput = parseInput(input);
             getSolutionPart2(pInput);
         };
     }),
