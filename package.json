@@ -6,6 +6,7 @@
     "scripts": {
         "start": "bash ./run_all.sh",
         "day": "run(){ tsc; node dist/day${1}/aoc.js; }; run",
+        "da": "run(){ ts-node src/day${1}/aoc.ts; }; run",
         "bench": "run(){ tsc; node dist/day${1}/benchmark.js; }; run",
         "test": "run(){ jest src/day${1}; }; run"
     },

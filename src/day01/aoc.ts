@@ -3,18 +3,6 @@ import { getInput } from '../common/get-input';
 
 export const DAY = 1;
 
-export const getSolutionPart1 = (input: number[]): number => {
-    const numberExists = new Set();
-    input.forEach((v) => numberExists.add(v));
-    for (const v of input) {
-        const diff = 2020 - v;
-        if (numberExists.has(diff)) {
-            return v * diff;
-        }
-    }
-    throw new Error('No numbers found');
-};
-
 export const parseInput = (data: string): number[] => {
     return _(data)
         .trim()
@@ -22,21 +10,28 @@ export const parseInput = (data: string): number[] => {
         .map((s) => parseInt(s, 10));
 };
 
-export const getSolutionPart2 = (input: number[]): number => {
-    const numberExists = new Set();
-    input.forEach((v) => numberExists.add(v));
-    for (const [i, v] of input.entries()) {
-        for (const [ii, vv] of input.entries()) {
-            if (i === ii) {
-                continue;
-            }
-            const diff = 2020 - v - vv;
-            if (numberExists.has(diff)) {
-                return v * vv * diff;
+export const getSolutionPart1 = (input: number[]): number => {
+    let num = 0;
+    let last = -1;
+    for (const i of input) {
+        if (last !== -1) {
+            if (i > last) {
+                num = num + 1;
             }
         }
+        last = i;
     }
-    throw new Error('No numbers found');
+    return num;
+};
+
+export const getSolutionPart2 = (input: number[]): number => {
+    let num = 0;
+    for (let i = 1; i <= input.length - 2; i++) {
+        if (input[i + 2] > input[i - 1]) {
+            num++;
+        }
+    }
+    return num;
 };
 
 const main = async () => {
