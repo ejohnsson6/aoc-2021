@@ -17,6 +17,7 @@
                 "require-const-for-all-caps"
             ]
         },
+        "no-bitwise":false,
         "interface-name": true,
         "indent": [true, "spaces", 4],
         "no-trailing-whitespace": [true, "ignore-comments"],
