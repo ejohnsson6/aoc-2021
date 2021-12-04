@@ -1,5 +1,5 @@
 import b from 'benny';
-import { cycleFormat } from '../common/cycle-format';
+import { cycleFormat } from '../common/bench-format';
 import { getInput } from '../common/get-input';
 import { DAY, getSolutionPart1, getSolutionPart2, parseInput } from './aoc';
 b.suite(
