@@ -1,5 +1,6 @@
 // tslint:disable-next-line: no-submodule-imports
 import { CaseResult, Summary } from 'benny/lib/internal/common-types';
+// tslint:disable-next-line: no-submodule-imports
 import colors from 'colors/safe';
 import si from 'systeminformation';
 
@@ -16,12 +17,12 @@ export const cycleFormat = (cycle: CaseResult) => {
     console.log(
         `\tmedian:\t${fmtNum(cycle.details.median * Math.pow(10, 9))} ns/op`
     );
-    console.log(`\tmax:\t${fmtNum(cycle.details.max * Math.pow(10, 9))} ns`);
-    console.log(`\tmin:\t${fmtNum(cycle.details.min * Math.pow(10, 9))} ns`);
+    console.log(`\tmax:\t${fmtNum(cycle.details.max * Math.pow(10, 9))} ns/op`);
+    console.log(`\tmin:\t${fmtNum(cycle.details.min * Math.pow(10, 9))} ns/op`);
     console.log(
         `\t±:\t${fmtNum(
             (cycle.details.max - cycle.details.min) * Math.pow(10, 9)
-        )} ns`
+        )} ns/op`
     );
 };
 
