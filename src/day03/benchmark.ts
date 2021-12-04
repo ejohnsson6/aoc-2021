@@ -1,4 +1,5 @@
 import b from 'benny';
+import { cycleFormat } from '../common/cycle-format';
 import { getInput } from '../common/get-input';
 import { DAY, getSolutionPart1, getSolutionPart2, parseInput } from './aoc';
 b.suite(
@@ -23,6 +24,6 @@ b.suite(
             getSolutionPart2(pInput);
         };
     }),
-    b.cycle(),
+    b.cycle(cycleFormat),
     b.complete()
 );
