@@ -50,12 +50,15 @@ export const getSolutionPart1 = (input: [number[][][], number[]]): number => {
 export const getSolutionPart2 = (input: [number[][][], number[]]): number => {
     let [boards, pile] = input;
     const drawn = new Set<number>();
+    const minNumToDraw = Math.min(boards[0].length, boards[0][0].length);
     for (const draw of pile) {
         drawn.add(draw);
         if (boards.length < 2 && hasBingo(boards[0], drawn)) {
             return countUnDrawn(boards[0], drawn) * draw;
         }
-        boards = boards.filter((b) => !hasBingo(b, drawn));
+        if (drawn.size >= minNumToDraw) {
+            boards = boards.filter((b) => !hasBingo(b, drawn));
+        }
     }
     return 0;
 };

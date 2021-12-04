@@ -11,9 +11,9 @@ export const cycleFormat = (cycle: CaseResult) => {
         );
 
     console.log(colors.cyan(`${cycle.name}: (${cycle.samples} ops)`));
-    console.log(
-        `\tmean:\t${fmtNum(cycle.details.mean * Math.pow(10, 9))} ns/op`
-    );
+    // console.log(
+    //     `\tmean:\t${fmtNum(cycle.details.mean * Math.pow(10, 9))} ns/op`
+    // );
     console.log(
         `\tmedian:\t${fmtNum(cycle.details.median * Math.pow(10, 9))} ns/op`
     );
