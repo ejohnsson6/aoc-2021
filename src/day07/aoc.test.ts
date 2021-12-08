@@ -8,5 +8,5 @@ test('Test part 1', () => {
 });
 
 test('Test part 2', () => {
-    expect(getSolutionPart2(parseInput(testInput2))).toBe(206);
+    expect(getSolutionPart2(parseInput(testInput2))).toBe(168);
 });
